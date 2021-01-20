@@ -19,16 +19,24 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-still-pug
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "688875092189"
+    project: jenkins-x-labs-bdd
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: cb-kubecd
+    repository: jx3-demo-walk-cluster
   - key: staging
   - key: production
   ingress:
@@ -39,9 +47,19 @@ jxRequirements:
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: jenkins-x-labs-bot
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-tf-jx-still-pug-05a0bb628b64
+  - name: reports
+    url: gs://reports-tf-jx-still-pug-05a0bb628b64
+  - name: repository
+    url: gs://repository-tf-jx-still-pug-05a0bb628b64
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
@@ -49,7 +67,7 @@ jxRequirementsIngressExternalDNS:
 jxRequirementsIngressTLS:
   enabled: false
 jxRequirementsKuberhealthy:
-  enabled: false
+  enabled: true
 jxRequirementsTLSCheck:
   enabled: false
 jxRequirementsVault:

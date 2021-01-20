@@ -1,0 +1,26 @@
+# Source: jx-kh-check/templates/jx-webhook-events-check.yaml
+apiVersion: comcast.github.io/v1
+kind: KuberhealthyCheck
+metadata:
+  name: jx-webhook-events
+  namespace: jx
+  annotations:
+    docs.jenkins-x.io: https://jenkins-x.io/v3/admin/troubleshooting/webhooks/
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  runInterval: 5m
+  timeout: 2m
+  podSpec:
+    containers:
+      - name: jx-webhook-events
+        image: gcr.io/jenkinsxio/jx-webhook-events:0.0.56
+        resources:
+          requests:
+            cpu: 25m
+            memory: 15Mi
+          limits:
+            cpu: 40m
+        restartPolicy: Never
+    serviceAccountName: jx-webhook-events-sa
+    terminationGracePeriodSeconds: 60

@@ -1,0 +1,8 @@
+# Source: jx-kh-check/templates/jx-webhook-events-check.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jx-webhook-events-sa
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
