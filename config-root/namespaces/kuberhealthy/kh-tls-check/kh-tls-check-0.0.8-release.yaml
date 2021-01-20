@@ -1,0 +1,28 @@
+# Source: kh-tls-check/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-07T12:10:55Z"
+  deletionTimestamp: null
+  name: 'kh-tls-check-0.0.8'
+  namespace: kuberhealthy
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: rawlingsj80@gmail.com
+        name: James Rawlings
+      branch: master
+      committer:
+        email: rawlingsj80@gmail.com
+        name: James Rawlings
+      message: |
+        chore: rename check so it descibes what the check is when running jx health get status
+      sha: 5bec36f0395774ef7a07759b76b60bdd210f1664
+  gitHttpUrl: https://github.com/jenkins-x-plugins/kh-tls-check
+  gitOwner: jenkins-x-plugins
+  gitRepository: kh-tls-check
+  name: 'kh-tls-check'
+  version: 0.0.8
+status: {}

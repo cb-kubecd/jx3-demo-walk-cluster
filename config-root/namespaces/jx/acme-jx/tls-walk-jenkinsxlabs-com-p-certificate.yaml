@@ -1,0 +1,18 @@
+# Source: acme/templates/cert-manager-prod-certificate.yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: "tls-walk-jenkinsxlabs-com-p"
+  labels:
+    jenkins.io/letsencrypt-service: production
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+spec:
+  secretName: "tls-walk-jenkinsxlabs-com-p"
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: "*.walk.jenkinsxlabs.com"
+  dnsNames:
+    - "*.walk.jenkinsxlabs.com"
+    - "walk.jenkinsxlabs.com"

@@ -26,13 +26,13 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: 35.222.231.236.nip.io
-    externalDNS: false
+    domain: walk.jenkinsxlabs.com
+    externalDNS: true
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
+      email: rawlingsj80gmail.com
+      enabled: true
       production: true
   kuberhealthy: true
   pipelineUser:

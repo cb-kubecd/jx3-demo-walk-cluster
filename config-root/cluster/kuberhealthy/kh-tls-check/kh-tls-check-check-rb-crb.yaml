@@ -1,0 +1,15 @@
+# Source: kh-tls-check/templates/kh-tls-check.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kh-tls-check-check-rb
+  labels:
+    gitops.jenkins-x.io/pipeline: 'cluster'
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kh-tls-check-role
+subjects:
+  - kind: ServiceAccount
+    name: kh-tls-check-sa
+    namespace: kuberhealthy

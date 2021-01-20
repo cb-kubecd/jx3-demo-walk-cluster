@@ -1,0 +1,28 @@
+# Source: kh-tls-check/templates/kh-tls-check.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kh-tls-check-role
+  labels:
+    gitops.jenkins-x.io/pipeline: 'cluster'
+rules:
+  - apiGroups:
+      - cert-manager.io
+    resources:
+      - issuers
+      - certificaterequests
+      - certificates
+      - clusterissuers
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - acme.cert-manager.io
+    resources:
+      - orders
+      - challenges
+    verbs:
+      - get
+      - list
+      - watch

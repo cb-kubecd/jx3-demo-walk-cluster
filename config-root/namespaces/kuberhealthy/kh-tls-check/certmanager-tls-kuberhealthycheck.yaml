@@ -1,0 +1,30 @@
+# Source: kh-tls-check/templates/kh-tls-check.yaml
+apiVersion: comcast.github.io/v1
+kind: KuberhealthyCheck
+metadata:
+  name: certmanager-tls
+  annotations:
+    docs.jenkins-x.io: https://jenkins-x.io/v3/admin/guides/tls_dns/
+  namespace: kuberhealthy
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  runInterval: 60s
+  timeout: 30s
+  podSpec:
+    securityContext:
+      runAsUser: 999
+      fsGroup: 999
+    containers:
+      - image: gcr.io/jenkinsxio/kh-tls-check:0.0.8
+        imagePullPolicy: IfNotPresent
+        env:
+        name: main
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+    serviceAccountName: kh-tls-check-sa

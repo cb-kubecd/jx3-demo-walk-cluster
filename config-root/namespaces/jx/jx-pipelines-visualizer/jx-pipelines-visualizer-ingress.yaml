@@ -17,9 +17,13 @@ metadata:
   namespace: jx
 spec:
   rules:
-    - host: dashboard-jx.35.222.231.236.nip.io
+    - host: dashboard-jx.walk.jenkinsxlabs.com
       http:
         paths:
           - backend:
               serviceName: jx-pipelines-visualizer
               servicePort: http
+  tls:
+    - secretName: tls-walk-jenkinsxlabs-com-p
+      hosts:
+        - dashboard-jx.walk.jenkinsxlabs.com

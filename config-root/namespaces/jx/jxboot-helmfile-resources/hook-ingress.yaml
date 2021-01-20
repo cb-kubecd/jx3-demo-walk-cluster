@@ -15,4 +15,8 @@ spec:
           - backend:
               serviceName: hook
               servicePort: 80
-      host: hook-jx.35.222.231.236.nip.io
+      host: hook-jx.walk.jenkinsxlabs.com
+  tls:
+    - hosts:
+        - hook-jx.walk.jenkinsxlabs.com
+      secretName: "tls-walk-jenkinsxlabs-com-p"

@@ -16,4 +16,8 @@ spec:
               serviceName: nexus
               servicePort: 80
             path: "/"
-      host: nexus-jx.35.222.231.236.nip.io
+      host: nexus-jx.walk.jenkinsxlabs.com
+  tls:
+    - hosts:
+        - nexus-jx.walk.jenkinsxlabs.com
+      secretName: "tls-walk-jenkinsxlabs-com-p"
