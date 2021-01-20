@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - cb-kubecd/jx3-demo-walk-cluster
-      target_url: http://dashboard-jx.
+      target_url: http://dashboard-jx.35.222.231.236.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
