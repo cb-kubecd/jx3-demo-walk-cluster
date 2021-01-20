@@ -1,8 +1,0 @@
-# Source: jx3-walk-go/templates/sa.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: jx3-walk-go-jx3-walk-go
-  namespace: jx-staging
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'
