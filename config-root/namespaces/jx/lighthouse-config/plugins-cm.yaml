@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - cb-kubecd/jx3-golang1
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - cb-kubecd/jx3-walk-go
       require_self_approval: true
     cat: {}
@@ -26,6 +30,22 @@ data:
     plugins:
       cb-kubecd/jx3-demo-walk-cluster:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      cb-kubecd/jx3-golang1:
       - approve
       - assign
       - blunderbuss
@@ -68,6 +88,9 @@ data:
     triggers:
     - repos:
       - cb-kubecd/jx3-demo-walk-cluster
+      trusted_org: todo
+    - repos:
+      - cb-kubecd/jx3-golang1
       trusted_org: todo
     - repos:
       - cb-kubecd/jx3-walk-go
