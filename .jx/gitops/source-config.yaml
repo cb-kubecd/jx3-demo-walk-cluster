@@ -8,5 +8,6 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: jx3-golang1
     - name: jx3-walk-go
     scheduler: in-repo
