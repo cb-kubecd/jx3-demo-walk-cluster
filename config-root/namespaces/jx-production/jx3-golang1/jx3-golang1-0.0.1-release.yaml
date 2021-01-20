@@ -1,0 +1,49 @@
+# Source: jx3-golang1/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-20T14:29:28Z"
+  deletionTimestamp: null
+  name: 'jx3-golang1-0.0.1'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.1
+      sha: c8ed993d79cddd20c3d14ea156eeb48d85fee6cd
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 7d88b38f68e1b4e8f98e31f7343f8d8743447931
+    - author:
+        email: rawlingsj80@gmail.com
+        name: James Rawlings
+      branch: master
+      committer:
+        email: rawlingsj80@gmail.com
+        name: James Rawlings
+      message: |
+        chore: Jenkins X build pack
+      sha: bd22d509b4da9c3f2f858b8ed602014cc1d06982
+  gitHttpUrl: https://github.com/cb-kubecd/jx3-golang1
+  gitOwner: cb-kubecd
+  gitRepository: jx3-golang1
+  name: 'jx3-golang1'
+  releaseNotesURL: https://github.com/cb-kubecd/jx3-golang1/releases/tag/v0.0.1
+  version: v0.0.1
+status: {}
