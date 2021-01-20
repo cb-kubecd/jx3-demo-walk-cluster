@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev/jx3-golang1
+  version: 0.0.2
+  name: jx3-golang1
+templates: {}
+renderedvalues: {}
