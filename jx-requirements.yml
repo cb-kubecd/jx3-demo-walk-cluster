@@ -31,7 +31,7 @@ spec:
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: rawlingsj80gmail.com
+      email: rawlingsj80@gmail.com
       enabled: true
       production: true
   kuberhealthy: true
