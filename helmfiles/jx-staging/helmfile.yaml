@@ -13,5 +13,8 @@ releases:
   name: jx3-walk-go
   values:
   - jx-values.yaml
+- chart: dev/jx3-golang1
+  version: 0.0.1
+  name: jx3-golang1
 templates: {}
 renderedvalues: {}
