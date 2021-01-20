@@ -1,0 +1,21 @@
+# Source: jx3-walk-go/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: jx3-walk-go
+  labels:
+    chart: "jx3-walk-go-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: jx3-walk-go-jx3-walk-go
