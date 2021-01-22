@@ -276,18 +276,3 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.19.1
-- namespace: jx-staging
-  path: helmfiles/jx-staging/helmfile.yaml
-  releases:
-  - apiVersion: v1
-    applicationUrl: https://jx3-golang1-jx-staging.walk.jenkinsxlabs.com
-    description: A Helm chart for Kubernetes
-    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    ingresses:
-    - name: jx3-golang1
-      url: https://jx3-golang1-jx-staging.walk.jenkinsxlabs.com
-    name: jx3-golang1
-    repositoryName: dev
-    repositoryUrl: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    resourcePath: config-root/namespaces/jx-staging/jx3-golang1
-    version: 0.0.4
