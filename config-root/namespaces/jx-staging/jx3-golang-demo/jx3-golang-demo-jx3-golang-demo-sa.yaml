@@ -1,8 +1,0 @@
-# Source: jx3-golang-demo/templates/sa.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: jx3-golang-demo-jx3-golang-demo
-  namespace: jx-staging
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'
