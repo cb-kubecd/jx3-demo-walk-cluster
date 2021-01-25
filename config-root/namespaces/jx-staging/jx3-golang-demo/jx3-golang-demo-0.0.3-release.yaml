@@ -1,0 +1,39 @@
+# Source: jx3-golang-demo/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-25T14:39:03Z"
+  deletionTimestamp: null
+  name: 'jx3-golang-demo-0.0.3'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.3
+      sha: e3acb8e98a350007206923dbb7c903902749b1b5
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: f9dbe7ed7a7cebb8bf898d139266b9a4764d14e3
+  gitHttpUrl: https://github.com/cb-kubecd/jx3-golang-demo
+  gitOwner: cb-kubecd
+  gitRepository: jx3-golang-demo
+  name: 'jx3-golang-demo'
+  releaseNotesURL: https://github.com/cb-kubecd/jx3-golang-demo/releases/tag/v0.0.3
+  version: v0.0.3
+status: {}
