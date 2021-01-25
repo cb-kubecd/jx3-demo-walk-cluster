@@ -1,0 +1,17 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx-staging
+repositories:
+- name: dev
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev/jx3-golang-demo
+  version: 0.0.1
+  name: jx3-golang-demo
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
