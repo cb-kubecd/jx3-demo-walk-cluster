@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         cb-kubecd/jx3-demo-walk-cluster: true
+        cb-kubecd/jx3-golang-demo: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         cb-kubecd/jx3-demo-walk-cluster: merge
+        cb-kubecd/jx3-golang-demo: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - cb-kubecd/jx3-demo-walk-cluster
+        - cb-kubecd/jx3-golang-demo
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - cb-kubecd/jx3-demo-walk-cluster
+        - cb-kubecd/jx3-golang-demo
       target_url: http://dashboard-jx.walk.jenkinsxlabs.com
 kind: ConfigMap
 metadata:

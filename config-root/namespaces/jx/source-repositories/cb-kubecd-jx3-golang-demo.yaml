@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: cb-kubecd
+    provider: github
+    repository: jx3-golang-demo
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: cb-kubecd-jx3-golang-demo
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/cb-kubecd/jx3-golang-demo.git
+  org: cb-kubecd
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-golang-demo
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/cb-kubecd/jx3-golang-demo
