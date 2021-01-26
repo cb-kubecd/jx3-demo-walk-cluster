@@ -10,3 +10,11 @@ spec:
     repositories:
     - name: jx3-golang-demo
     scheduler: in-repo
+  jenkinsServers:
+  - groups:
+    - owner: jenkins-x
+      provider: https://github.com
+      providerKind: github
+      repositories:
+      - name: myjenkins
+    server: jenkins1
