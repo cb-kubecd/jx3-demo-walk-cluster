@@ -1,0 +1,29 @@
+# Source: jenkins-resources/templates/pipelineactivity-role.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: jenkins-pipeline-activity
+  namespace: myjenkins
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - services
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - jenkins.io
+    resources:
+      - pipelineactivities
+      - sourcerepositories
+    verbs:
+      - list
+      - get
+      - watch
+      - create
+      - update
+      - patch
