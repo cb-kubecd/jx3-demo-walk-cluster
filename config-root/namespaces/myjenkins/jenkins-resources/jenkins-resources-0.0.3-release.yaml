@@ -1,0 +1,52 @@
+# Source: jenkins-resources/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-12-18T15:22:31Z"
+  deletionTimestamp: null
+  name: 'jenkins-resources-0.0.3'
+  namespace: myjenkins
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: added variables
+      sha: 9f5dc57f2ed53dd381f6dde1118da5f4529d78ac
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      message: |
+        fix: add karma to view secrets too
+      sha: 78edc039cf499945cb1fac264a1e658af794bee9
+  gitCloneUrl: https://github.com/jenkins-x-charts/jenkins-resources.git
+  gitHttpUrl: https://github.com/jenkins-x-charts/jenkins-resources
+  gitOwner: jenkins-x-charts
+  gitRepository: jenkins-resources
+  name: 'jenkins-resources'
+  releaseNotesURL: https://github.com/jenkins-x-charts/jenkins-resources/releases/tag/v0.0.3
+  version: v0.0.3
+status: {}

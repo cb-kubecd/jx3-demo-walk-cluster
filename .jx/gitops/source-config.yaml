@@ -10,3 +10,5 @@ spec:
     repositories:
     - name: jx3-golang-demo
     scheduler: in-repo
+  jenkinsServers:
+  - server: myjenkins

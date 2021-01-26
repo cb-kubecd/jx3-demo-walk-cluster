@@ -1,0 +1,4 @@
+# custom Jenkins chart configuration
+# see https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/VALUES_SUMMARY.md
+
+sampleValue: removeMeWhenYouAddRealConfiguration
