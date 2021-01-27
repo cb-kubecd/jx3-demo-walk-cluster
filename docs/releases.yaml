@@ -228,13 +228,13 @@
           url: https://www.jenkins.io/
     apiVersion: v2
     appVersion: 2.263.2
-    applicationUrl: http://jenkins-myjenkins.walk.jenkinsxlabs.com
+    applicationUrl: https://jenkins-myjenkins.walk.jenkinsxlabs.com
     description: Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
     home: https://jenkins.io/
     icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
     ingresses:
     - name: jenkins
-      url: http://jenkins-myjenkins.walk.jenkinsxlabs.com
+      url: https://jenkins-myjenkins.walk.jenkinsxlabs.com
     maintainers:
     - email: maor.friedman@redhat.com
       name: maorfr

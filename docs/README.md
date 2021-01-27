@@ -115,7 +115,7 @@
 	    <tr>
 	      <td><a href='https://jenkins.io/' title='Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.'> <img src='https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png' width='24px' height='24px'> jenkins </a></td>
 	      <td></td>
-	      <td><a href='http://jenkins-myjenkins.walk.jenkinsxlabs.com'>view</a></td>
+	      <td><a href='https://jenkins-myjenkins.walk.jenkinsxlabs.com'>view</a></td>
 	      <td><a href='https://jenkins.io/'>source</a></td>
 	    </tr>
     <tr>
