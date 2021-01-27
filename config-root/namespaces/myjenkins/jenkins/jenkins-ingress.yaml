@@ -19,3 +19,6 @@ spec:
               serviceName: jenkins
               servicePort: 8080
       host: "jenkins-myjenkins.walk.jenkinsxlabs.com"
+  tls:
+    - hosts:
+        - jenkins-myjenkins.walk.jenkinsxlabs.com
