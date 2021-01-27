@@ -1,0 +1,16 @@
+# Source: jenkins/templates/jcasc-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jenkins-jenkins-config-jxsetup
+  namespace: myjenkins
+  labels:
+    "app.kubernetes.io/name": jenkins
+    "helm.sh/chart": "jenkins-3.1.2"
+    "app.kubernetes.io/managed-by": "Helm"
+    "app.kubernetes.io/instance": "jenkins"
+    "app.kubernetes.io/component": "jenkins-controller"
+    jenkins-jenkins-config: "true"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+data:
+  jxsetup.yaml: "jobs:\n  - script: |\n      // from template: versionStream/jenkins/templates/folder.gotmpl\n      folder('rawlingsj')\n                    \n      // from template: versionStream/jenkins/templates/job.gotmpl\n      multibranchPipelineJob('rawlingsj/jenkins') {\n          branchSources {\n              github {\n                  id('rawlingsj-jenkins')\n                  scanCredentialsId('tekton-git')\n                  repoOwner('rawlingsj')\n                  repository('jenkins')\n              }\n          }\n      }"
