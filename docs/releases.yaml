@@ -21,6 +21,21 @@
     sources:
     - https://github.com/jetstack/cert-manager
     version: 1.1.0
+- namespace: jx-staging
+  path: helmfiles/jx-staging/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    applicationUrl: https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com
+    description: A Helm chart for Kubernetes
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    ingresses:
+    - name: jx3-golang-demo
+      url: https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com
+    name: jx3-golang-demo
+    repositoryName: dev
+    repositoryUrl: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    resourcePath: config-root/namespaces/jx-staging/jx3-golang-demo
+    version: 0.0.3
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
   releases:
@@ -202,6 +217,48 @@
     sources:
     - https://github.com/jenkins-x-plugins/kh-tls-check
     version: 0.0.8
+- namespace: myjenkins
+  path: helmfiles/myjenkins/helmfile.yaml
+  releases:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+        - name: Jenkins
+          url: https://www.jenkins.io/
+    apiVersion: v2
+    appVersion: 2.263.2
+    applicationUrl: http://jenkins-myjenkins.walk.jenkinsxlabs.com
+    description: Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    ingresses:
+    - name: jenkins
+      url: http://jenkins-myjenkins.walk.jenkinsxlabs.com
+    maintainers:
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    - email: wmcdona89@gmail.com
+      name: wmcdona89
+    - email: timjacomb1@gmail.com
+      name: timja
+    name: jenkins
+    repositoryName: jenkinsci
+    repositoryUrl: https://charts.jenkins.io
+    resourcePath: config-root/namespaces/myjenkins/jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-inbound-agent
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+  - name: jenkins-resources
+    repositoryName: jx3
+    repositoryUrl: https://charts.jenkins.io
+    resourcePath: config-root/namespaces/myjenkins/jenkins-resources
 - namespace: nginx
   path: helmfiles/nginx/helmfile.yaml
   releases:
@@ -276,18 +333,3 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.19.1
-- namespace: jx-staging
-  path: helmfiles/jx-staging/helmfile.yaml
-  releases:
-  - apiVersion: v1
-    applicationUrl: https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com
-    description: A Helm chart for Kubernetes
-    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    ingresses:
-    - name: jx3-golang-demo
-      url: https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com
-    name: jx3-golang-demo
-    repositoryName: dev
-    repositoryUrl: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    resourcePath: config-root/namespaces/jx-staging/jx3-golang-demo
-    version: 0.0.3

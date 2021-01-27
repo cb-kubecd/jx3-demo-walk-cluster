@@ -21,6 +21,15 @@
 	      <td><a href='https://github.com/jetstack/cert-manager'>source</a></td>
 	    </tr>
     <tr>
+		      <td colspan='4'><h3>jx-staging</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> jx3-golang-demo </a></td>
+	      <td>0.0.3</td>
+	      <td><a href='https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com'>view</a></td>
+	      <td></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx</h3></td>
 		    </tr>
 	    <tr>
@@ -101,6 +110,21 @@
 	      <td><a href='https://jenkins-x.io/'>source</a></td>
 	    </tr>
     <tr>
+		      <td colspan='4'><h3>myjenkins</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='https://jenkins.io/' title='Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.'> <img src='https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png' width='24px' height='24px'> jenkins </a></td>
+	      <td></td>
+	      <td><a href='http://jenkins-myjenkins.walk.jenkinsxlabs.com'>view</a></td>
+	      <td><a href='https://jenkins.io/'>source</a></td>
+	    </tr>
+    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> jenkins-resources </a></td>
+	      <td></td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>nginx</h3></td>
 		    </tr>
 	    <tr>
@@ -132,15 +156,6 @@
 	      <td>0.19.1</td>
 	      <td></td>
 	      <td><a href='https://github.com/cdfoundation/tekton-helm-chart'>source</a></td>
-	    </tr>
-    <tr>
-		      <td colspan='4'><h3>jx-staging</h3></td>
-		    </tr>
-	    <tr>
-	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> jx3-golang-demo </a></td>
-	      <td>0.0.3</td>
-	      <td><a href='https://jx3-golang-demo-jx-staging.walk.jenkinsxlabs.com'>view</a></td>
-	      <td></td>
 	    </tr>
 
   </tbody>
