@@ -17,6 +17,7 @@ releases:
   - ../../versionStream/charts/jenkinsci/jenkins/values.yaml.gotmpl
   - jx-values.yaml
   - testEnabled: true
+  - job-values.yaml
 - chart: jx3/jenkins-resources
   name: jenkins-resources
   namespace: myjenkins
