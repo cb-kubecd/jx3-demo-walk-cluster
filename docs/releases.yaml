@@ -227,7 +227,7 @@
         - name: Jenkins
           url: https://www.jenkins.io/
     apiVersion: v2
-    appVersion: 2.263.2
+    appVersion: 2.263.3
     applicationUrl: https://jenkins-myjenkins.walk.jenkinsxlabs.com
     description: Jenkins - Build great things at any scale! The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
     home: https://jenkins.io/
