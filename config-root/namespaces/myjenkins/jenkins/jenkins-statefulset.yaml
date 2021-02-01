@@ -6,7 +6,7 @@ metadata:
   namespace: myjenkins
   labels:
     "app.kubernetes.io/name": 'jenkins'
-    "helm.sh/chart": "jenkins-3.1.2"
+    "helm.sh/chart": "jenkins-3.1.5"
     "app.kubernetes.io/managed-by": "Helm"
     "app.kubernetes.io/instance": "jenkins"
     "app.kubernetes.io/component": "jenkins-controller"
@@ -35,7 +35,7 @@ spec:
       serviceAccountName: "jenkins"
       initContainers:
         - name: "init"
-          image: "jenkins/jenkins:2.263.2"
+          image: "jenkins/jenkins:2.263.3"
           imagePullPolicy: "Always"
           command: ["sh", "/var/jenkins_config/apply_config.sh"]
           resources:
@@ -56,7 +56,7 @@ spec:
               name: plugin-dir
       containers:
         - name: jenkins
-          image: "jenkins/jenkins:2.263.2"
+          image: "jenkins/jenkins:2.263.3"
           imagePullPolicy: "Always"
           args: ["--httpPort=8080"]
           env:
@@ -138,7 +138,7 @@ spec:
             - name: FOLDER
               value: "/var/jenkins_home/casc_configs"
             - name: NAMESPACE
-              value: "myjenkins"
+              value: 'myjenkins'
             - name: REQ_URL
               value: "http://localhost:8080/reload-configuration-as-code/?casc-reload-token=$(POD_NAME)"
             - name: REQ_METHOD
