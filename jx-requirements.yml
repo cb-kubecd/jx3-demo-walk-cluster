@@ -6,7 +6,7 @@ spec:
     schedule: ""
   cluster:
     chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    clusterName: tf-jx-still-pug
+    clusterName: tf-jx-legal-goose
     devEnvApprovers:
     - todo
     environmentGitOwner: todo

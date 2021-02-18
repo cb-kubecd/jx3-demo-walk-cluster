@@ -82,5 +82,10 @@ releases:
   values:
   - ../../versionStream/charts/jx3/health-checks-jx/values.yaml.gotmpl
   - jx-values.yaml
+- chart: grafana/grafana
+  name: grafana
+  values:
+  - ../../versionStream/charts/grafana/grafana/values.yaml.gotmpl
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
