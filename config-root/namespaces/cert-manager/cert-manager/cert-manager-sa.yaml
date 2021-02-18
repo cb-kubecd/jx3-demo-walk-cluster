@@ -5,7 +5,7 @@ metadata:
   name: cert-manager
   namespace: "cert-manager"
   annotations:
-    iam.gke.io/gcp-service-account: tf-jx-still-pug-dn@jenkins-x-labs-bdd.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: tf-jx-legal-goose-dn@jenkins-x-labs-bdd.iam.gserviceaccount.com
   labels:
     app: cert-manager
     app.kubernetes.io/name: cert-manager
