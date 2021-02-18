@@ -1,0 +1,42 @@
+# Source: jenkins/templates/tests/jenkins-test.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "jenkins-ui-test-281ec"
+  namespace: myjenkins
+  annotations:
+    "helm.sh/hook": test-success
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  initContainers:
+    - name: "test-framework"
+      image: "bats/bats:1.2.1"
+      command:
+        - "bash"
+        - "-c"
+      args:
+        - |
+          # copy bats to tools dir
+          set -ex
+          cp -R /opt/bats /tools/bats/
+      volumeMounts:
+        - mountPath: /tools
+          name: tools
+  containers:
+    - name: jenkins-ui-test
+      image: jenkins/jenkins:2.263.3
+      command: ["/tools/bats/bin/bats", "-t", "/tests/run.sh"]
+      volumeMounts:
+        - mountPath: /tests
+          name: tests
+          readOnly: true
+        - mountPath: /tools
+          name: tools
+  volumes:
+    - name: tests
+      configMap:
+        name: jenkins-tests
+    - name: tools
+      emptyDir: {}
+  restartPolicy: Never

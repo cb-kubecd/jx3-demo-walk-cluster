@@ -199,6 +199,35 @@
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
+  - apiVersion: v2
+    appVersion: 7.4.1
+    applicationUrl: http://grafana-jx.walk.jenkinsxlabs.com/
+    description: The leading tool for querying and visualizing time series and metrics.
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    ingresses:
+    - name: grafana
+      url: http://grafana-jx.walk.jenkinsxlabs.com/
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    repositoryName: grafana
+    repositoryUrl: https://grafana.github.io/helm-charts
+    resourcePath: config-root/namespaces/jx/grafana
+    sources:
+    - https://github.com/grafana/grafana
+    type: application
+    version: 6.4.2
 - namespace: kuberhealthy
   path: helmfiles/kuberhealthy/helmfile.yaml
   releases:
