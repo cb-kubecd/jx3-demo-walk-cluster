@@ -179,7 +179,7 @@ spec:
           out revision: $(params.PULL_PULL_SHA) to dir: $(params.subdirectory)'
         command:
         - /bin/sh
-        image: gcr.io/jenkinsxio/builder-jx:2.1.32-662
+        image: ghcr.io/jenkins-x/builder-jx:2.1.32-662
         name: git-clone
         resources: {}
         workingDir: /workspace
@@ -188,7 +188,7 @@ spec:
         command:
         - /bin/sh
         - -c
-        image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
+        image: ghcr.io/jenkins-x/builder-jx:2.1.142-761
         name: setup-builder-home
         resources: {}
       - args:
@@ -199,7 +199,7 @@ spec:
         - jx-git-operator
         command:
         - jx
-        image: gcr.io/jenkinsxio/jx-cli:latest
+        image: ghcr.io/jenkins-x/jx-cli:latest
         name: git-setup
         resources: {}
         workingDir: /workspace
@@ -216,7 +216,7 @@ spec:
         - $(params.PULL_BASE_REF)
         command:
         - jx
-        image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
+        image: ghcr.io/jenkins-x/builder-jx:2.1.142-761
         name: git-merge
         resources: {}
       - args:
@@ -224,7 +224,7 @@ spec:
         - variables
         command:
         - jx
-        image: gcr.io/jenkinsxio/jx-cli:latest
+        image: ghcr.io/jenkins-x/jx-cli:latest
         name: jx-variables
         resources: {}
       - args:
@@ -238,7 +238,7 @@ spec:
         command:
         - /bin/sh
         - -c
-        image: gcr.io/jenkinsxio/builder-maven:2.1.142-761
+        image: ghcr.io/jenkins-x/builder-maven:2.1.142-761
         name: create-effective-pipeline
         resources: {}
       - args:
@@ -249,7 +249,7 @@ spec:
         command:
         - /bin/sh
         - -c
-        image: gcr.io/jenkinsxio/builder-maven:2.1.142-761
+        image: ghcr.io/jenkins-x/builder-maven:2.1.142-761
         name: create-tekton-crds
         resources: {}
       volumes:

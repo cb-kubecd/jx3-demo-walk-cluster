@@ -20,7 +20,7 @@ args:
 - "--git-reporting"
 - "--verbose"
 image:
-  repository: gcr.io/jenkinsxio-labs/jxl
+  repository: ghcr.io/jenkins-x-labs/jxl
   tag: 0.0.165
 env:
   GIT_AUTHOR_NAME: "jenkins-x-bot"

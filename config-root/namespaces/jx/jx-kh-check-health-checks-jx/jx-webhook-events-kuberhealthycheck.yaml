@@ -14,7 +14,7 @@ spec:
   podSpec:
     containers:
       - name: jx-webhook-events
-        image: gcr.io/jenkinsxio/jx-webhook-events:0.0.56
+        image: ghcr.io/jenkins-x/jx-webhook-events:0.0.56
         resources:
           requests:
             cpu: 25m
