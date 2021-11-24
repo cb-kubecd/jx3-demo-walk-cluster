@@ -28,7 +28,7 @@ spec:
       serviceAccountName: lighthouse-tekton-controller
       containers:
         - name: lighthouse-tekton-controller
-          image: gcr.io/jenkinsxio/lighthouse-tekton-controller:0.0.918
+          image: ghcr.io/jenkins-x/lighthouse-tekton-controller:0.0.918
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx
@@ -47,7 +47,7 @@ spec:
             - name: FILE_BROWSER
               value: "git"
             - name: JX_DEFAULT_IMAGE
-              value: "gcr.io/jenkinsxio/builder-maven:2.1.142-761"
+              value: "ghcr.io/jenkins-x/builder-maven:2.1.142-761"
             - name: LIGHTHOUSE_DASHBOARD_TEMPLATE
               value: "namespaces/{{ .Namespace }}/pipelineruns/{{ .PipelineRun }}"
             - name: LIGHTHOUSE_VERSIONSTREAM_JENKINS_X_JX3_PIPELINE_CATALOG

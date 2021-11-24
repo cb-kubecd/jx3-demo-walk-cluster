@@ -16,7 +16,7 @@ spec:
       runAsUser: 999
       fsGroup: 999
     containers:
-      - image: gcr.io/jenkinsxio/kh-tls-check:0.0.8
+      - image: ghcr.io/jenkins-x/kh-tls-check:0.0.8
         imagePullPolicy: IfNotPresent
         env:
         name: main

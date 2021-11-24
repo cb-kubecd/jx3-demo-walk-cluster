@@ -6,4 +6,4 @@ the file layout is `[registry]/[owner]/imageName.yml` with the YAML file contain
 
 e.g.
 
-* [gcr.io](gcr.io)/[jenkinsxio](gcr.io/jenkinsxio)/[builder-go.yml](gcr.io/jenkinsxio/builder-go.yml)
+* [gcr.io](gcr.io)/[jenkinsxio](ghcr.io/jenkins-x)/[builder-go.yml](ghcr.io/jenkins-x/builder-go.yml)

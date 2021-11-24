@@ -20,7 +20,7 @@ tektoncontroller:
   dashboardTemplate: "namespaces/{{"{{"}} .Namespace {{"}}"}}/pipelineruns/{{"{{"}} .PipelineRun {{"}}"}}"
 
 env:
-  JX_DEFAULT_IMAGE: gcr.io/jenkinsxio/builder-maven:2.1.142-761
+  JX_DEFAULT_IMAGE: ghcr.io/jenkins-x/builder-maven:2.1.142-761
   LIGHTHOUSE_DASHBOARD_TEMPLATE: "namespaces/{{"{{"}} .Namespace {{"}}"}}/pipelineruns/{{"{{"}} .PipelineRun {{"}}"}}"
   DEFAULT_PIPELINE_RUN_SERVICE_ACCOUNT: tekton-bot
   DEFAULT_PIPELINE_RUN_TIMEOUT: "2h0m0s"
@@ -30,7 +30,7 @@ env:
   LIGHTHOUSE_VERSIONSTREAM_JENKINS_X_JX3_PIPELINE_CATALOG: {{ readFile "../../../git/github.com/jenkins-x/jx3-pipeline-catalog.yml" | fromYaml | get "version" | quote }}
 
 image:
-  repository: gcr.io/jenkinsxio/lighthouse
+  repository: ghcr.io/jenkins-x/lighthouse
 
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}

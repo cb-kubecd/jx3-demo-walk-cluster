@@ -32,7 +32,7 @@ spec:
     namespaceSubDomain: -jx.
     tls:
       email: rawlingsj80@gmail.com
-      enabled: true
+      enabled: false
       production: true
   kuberhealthy: true
   pipelineUser:
