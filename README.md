@@ -1,4 +1,4 @@
-# Jenkins X 3.x GitOps Repository for GKE and Google Secret Manager
+# Jenkins X 3.x GitOps Repository for GKE and Google Secret Manager!
 
 This git repository installs Jenkins X with Google Secret Manager.
 
