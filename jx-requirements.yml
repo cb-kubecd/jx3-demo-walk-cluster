@@ -9,16 +9,16 @@ spec:
     clusterName: tf-jx-legal-goose
     devEnvApprovers:
     - todo
-    environmentGitOwner: todo
+    environmentGitOwner: ci-cd-bot
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    gke:
-      projectNumber: "688875092189"
-    project: jenkins-x-labs-bdd
-    provider: gke
-    registry: gcr.io
-    zone: us-central1-a
+    #gke:
+    #  projectNumber: "688875092189"
+    #project: jenkins-x-labs-bdd
+   # provider: gke
+    #registry: gcr.io
+   # zone: us-central1-a
   environments:
   - key: dev
     owner: cb-kubecd
@@ -26,25 +26,25 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: walk.jenkinsxlabs.com
-    externalDNS: true
+    domain:""
+    externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: rawlingsj80@gmail.com
-      enabled: true
+      email: hussain@peaq.io
+      enabled: false
       production: true
   kuberhealthy: true
   pipelineUser:
-    username: jenkins-x-labs-bot
-  repository: nexus
-  secretStorage: gsm
-  storage:
-  - name: logs
-    url: gs://logs-tf-jx-still-pug-05a0bb628b64
-  - name: reports
-    url: gs://reports-tf-jx-still-pug-05a0bb628b64
-  - name: repository
-    url: gs://repository-tf-jx-still-pug-05a0bb628b64
+    username: ci-cd-bot
+  #repository: nexus
+  #secretStorage: gsm
+  #storage:
+  #- name: logs
+  #  url: gs://logs-tf-jx-still-pug-05a0bb628b64
+  #- name: reports
+  #  url: gs://reports-tf-jx-still-pug-05a0bb628b64
+  #- name: repository
+   # url: gs://repository-tf-jx-still-pug-05a0bb628b64
   vault: {}
   webhook: lighthouse
